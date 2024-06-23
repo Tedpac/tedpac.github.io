@@ -1,0 +1,1 @@
+document.getElementById("show-email-address").addEventListener("click",(function(){const e=atob(["bmNh","cGRl","dG1A","Z21h","aWwu","Y29t"].join("")),t=document.createElement("a");t.href=`mailto:${e}`,t.textContent=e;const d=document.getElementById("show-email-address");d.parentNode.removeChild(d),document.getElementById("email-address").appendChild(t)}));
