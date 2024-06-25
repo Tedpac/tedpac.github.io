@@ -7,7 +7,7 @@ module.exports = {
     "assets/js/animation-manager": "./src/assets/js/animation-manager.js",
     "assets/js/email-address-handler": "./src/assets/js/email-address-handler.js",
   },
-  mode: "production",
+  mode: process.env.NODE_ENV || "development",
   module: {
     rules: [
       {
