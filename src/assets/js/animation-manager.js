@@ -27,7 +27,7 @@ const ANIMATION_BREAKPOINTS = [
 
 const DEFAULT_ANIMATION_OPTIONS = {
   mouseControls: true,
-  touchControls: true,
+  touchControls: false,
   gyroControls: false,
   minHeight: 200.0,
   minWidth: 200.0,
