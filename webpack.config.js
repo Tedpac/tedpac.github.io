@@ -2,6 +2,11 @@ const path = require("node:path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
+  devServer: {
+    hot: false, // Avoids problems by having multiple entry points.
+    port: 9000,
+  },
+  devtool: process.env.NODE_ENV === "development" ? "eval-source-map" : false,
   entry: {
     "assets/js/main": "./src/assets/js/main.js",
     "assets/js/animation-manager": "./src/assets/js/animation-manager.js",
@@ -23,7 +28,6 @@ module.exports = {
     ],
   },
   output: {
-    clean: true,
     filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
   },
