@@ -21,7 +21,9 @@
 
     if (selectEl) {
       if (all) {
-        selectEl.forEach((e) => e.addEventListener(type, listener));
+        for (const e of selectEl) {
+          e.addEventListener(type, listener);
+        }
       } else {
         selectEl.addEventListener(type, listener);
       }
@@ -63,9 +65,9 @@
         const sections = select("section", true);
         const navlinks = select("#navbar .nav-link", true);
 
-        navlinks.forEach((item) => {
+        for (const item of navlinks) {
           item.classList.remove("active");
-        });
+        }
 
         this.classList.add("active");
 
@@ -78,24 +80,24 @@
 
         if (this.hash == "#header") {
           header.classList.remove("header-top");
-          sections.forEach((item) => {
+          for (const item of sections) {
             item.classList.remove("section-show");
-          });
+          }
           return;
         }
 
         if (!header.classList.contains("header-top")) {
           header.classList.add("header-top");
           setTimeout(function () {
-            sections.forEach((item) => {
+            for (const item of sections) {
               item.classList.remove("section-show");
-            });
+            }
             section.classList.add("section-show");
           }, 350);
         } else {
-          sections.forEach((item) => {
+          for (const item of sections) {
             item.classList.remove("section-show");
-          });
+          }
           section.classList.add("section-show");
         }
 
@@ -118,13 +120,13 @@
 
         header.classList.add("header-top");
 
-        navlinks.forEach((item) => {
+        for (const item of navlinks) {
           if (item.getAttribute("href") == window.location.hash) {
             item.classList.add("active");
           } else {
             item.classList.remove("active");
           }
-        });
+        }
 
         setTimeout(function () {
           initial_nav.classList.add("section-show");
@@ -145,9 +147,9 @@
       offset: "80%",
       handler: function (direction) {
         const progress = select(".progress .progress-bar", true);
-        progress.forEach((el) => {
+        for (const el of progress) {
           el.style.width = el.getAttribute("aria-valuenow") + "%";
-        });
+        }
       },
     });
   }
@@ -199,9 +201,9 @@
         "#portfolio-flters li",
         function (e) {
           e.preventDefault();
-          portfolioFilters.forEach(function (el) {
+          for (const el of portfolioFilters) {
             el.classList.remove("filter-active");
-          });
+          }
           this.classList.add("filter-active");
 
           portfolioIsotope.arrange({
