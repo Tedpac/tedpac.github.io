@@ -88,7 +88,7 @@
 
         if (!header.classList.contains("header-top")) {
           header.classList.add("header-top");
-          setTimeout(function () {
+          setTimeout(() => {
             for (const item of sections) {
               item.classList.remove("section-show");
             }
@@ -128,7 +128,7 @@
           }
         }
 
-        setTimeout(function () {
+        setTimeout(() => {
           initial_nav.classList.add("section-show");
         }, 350);
 
@@ -145,7 +145,7 @@
     new Waypoint({
       element: skilsContent,
       offset: "80%",
-      handler: function (direction) {
+      handler: (direction) => {
         const progress = select(".progress .progress-bar", true);
         for (const el of progress) {
           el.style.width = el.getAttribute("aria-valuenow") + "%";
