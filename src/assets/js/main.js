@@ -1,16 +1,16 @@
 (() => {
+  // biome-ignore lint/suspicious/noRedundantUseStrict: prevent possible side effects.
   "use strict";
 
   /**
    * Easy selector helper function
    */
-  const select = (el, all = false) => {
-    el = el.trim();
+  const select = (element, all = false) => {
+    const el = element.trim();
     if (all) {
       return [...document.querySelectorAll(el)];
-    } else {
-      return document.querySelector(el);
     }
+    return document.querySelector(el);
   };
 
   /**
@@ -78,7 +78,7 @@
           navbarToggle.classList.toggle("bi-x");
         }
 
-        if (this.hash == "#header") {
+        if (this.hash === "#header") {
           header.classList.remove("header-top");
           for (const item of sections) {
             item.classList.remove("section-show");
@@ -121,7 +121,7 @@
         header.classList.add("header-top");
 
         for (const item of navlinks) {
-          if (item.getAttribute("href") == window.location.hash) {
+          if (item.getAttribute("href") === window.location.hash) {
             item.classList.add("active");
           } else {
             item.classList.remove("active");
@@ -142,13 +142,14 @@
    */
   const skilsContent = select(".skills-content");
   if (skilsContent) {
+    // @ts-ignore
     new Waypoint({
       element: skilsContent,
       offset: "80%",
       handler: (direction) => {
         const progress = select(".progress .progress-bar", true);
         for (const el of progress) {
-          el.style.width = el.getAttribute("aria-valuenow") + "%";
+          el.style.width = `${el.getAttribute("aria-valuenow")}%`;
         }
       },
     });
@@ -157,6 +158,7 @@
   /**
    * Testimonials slider
    */
+  // @ts-ignore
   new Swiper(".testimonials-slider", {
     speed: 600,
     loop: true,
@@ -189,6 +191,7 @@
   window.addEventListener("load", () => {
     const portfolioContainer = select(".portfolio-container");
     if (portfolioContainer) {
+      // @ts-ignore
       const portfolioIsotope = new Isotope(portfolioContainer, {
         itemSelector: ".portfolio-item",
         layoutMode: "fitRows",
@@ -218,6 +221,7 @@
   /**
    * Initiate portfolio lightbox
    */
+  // @ts-ignore
   const portfolioLightbox = GLightbox({
     selector: ".portfolio-lightbox",
   });
@@ -225,6 +229,7 @@
   /**
    * Initiate portfolio details lightbox
    */
+  // @ts-ignore
   const portfolioDetailsLightbox = GLightbox({
     selector: ".portfolio-details-lightbox",
     width: "90%",
@@ -234,6 +239,7 @@
   /**
    * Portfolio details slider
    */
+  // @ts-ignore
   new Swiper(".portfolio-details-slider", {
     speed: 400,
     loop: true,
@@ -251,5 +257,6 @@
   /**
    * Initiate Pure Counter
    */
+  // @ts-ignore
   new PureCounter();
 })();
