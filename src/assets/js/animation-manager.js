@@ -138,5 +138,4 @@ class AnimationManager {
   }
 }
 
-const animationManager = new AnimationManager();
-animationManager.startAnimation();
+export { AnimationManager };

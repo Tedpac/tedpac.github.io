@@ -17,4 +17,8 @@ function showEmailAddress() {
   document.getElementById("email-address").appendChild(emailAddressLink);
 }
 
-document.getElementById("show-email-address").addEventListener("click", showEmailAddress);
+function initializeEmailAddressHandler() {
+  document.getElementById("show-email-address").addEventListener("click", showEmailAddress);
+}
+
+export { initializeEmailAddressHandler };
