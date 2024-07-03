@@ -2,14 +2,9 @@ const path = require("node:path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  devServer: {
-    port: 9000,
-  },
-  devtool: process.env.NODE_ENV === "development" ? "eval-source-map" : false,
   entry: {
     "assets/js/main": "./src/assets/js/main.js",
   },
-  mode: process.env.NODE_ENV || "development",
   module: {
     rules: [
       {
@@ -25,8 +20,9 @@ module.exports = {
     ],
   },
   output: {
+    clean: true,
     filename: "[name].js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "../dist"),
   },
   plugins: [
     new CopyWebpackPlugin({
