@@ -3,9 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  entry: {
-    "assets/js/main": "./src/assets/js/main.js",
-  },
+  entry: "./src/assets/js/main.js",
   module: {
     rules: [
       {
@@ -22,7 +20,7 @@ module.exports = {
   },
   output: {
     clean: true,
-    filename: "[name].js",
+    filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "../dist"),
   },
   plugins: [
