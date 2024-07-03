@@ -1,6 +1,6 @@
 /* global ResizeObserver, VANTA */
 
-const ANIMATION_CONTAINER_ID = "animationContainer";
+const ANIMATION_CONTAINER_ID = "animation-container";
 
 /** Delay in milliseconds to debounce the animation resize event. */
 const ANIMATION_RESIZE_DEBOUNCE_DELAY = 200;
