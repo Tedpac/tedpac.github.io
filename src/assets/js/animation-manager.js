@@ -14,15 +14,14 @@ const ANIMATION_RESIZE_DEBOUNCE_DELAY = 200;
  * - minWidth: the minimum width of the viewport for the breakpoint.
  * - size: affects the size of the animation by a scale factor.
  * - brightness: the brightness of the animation.
- * - yOffset: the vertical offset of the animation.
  */
 const ANIMATION_BREAKPOINTS = [
-  { minWidth: 1400, size: 1, brightness: 0.8, yOffset: 0 }, // xxl
-  { minWidth: 1200, size: 0.9, brightness: 0.75, yOffset: 0 }, // xl
-  { minWidth: 992, size: 0.9, brightness: 0.7, yOffset: 0 }, // lg
-  { minWidth: 768, size: 0.8, brightness: 0.6, yOffset: 0.06 }, // md
-  { minWidth: 576, size: 0.8, brightness: 0.55, yOffset: 0.065 }, // sm
-  { minWidth: 0, size: 0.7, brightness: 0.55, yOffset: 0.055 }, // xs
+  { minWidth: 1400, size: 1, brightness: 0.8 }, // xxl
+  { minWidth: 1200, size: 0.9, brightness: 0.75 }, // xl
+  { minWidth: 992, size: 0.9, brightness: 0.7 }, // lg
+  { minWidth: 768, size: 0.8, brightness: 0.6 }, // md
+  { minWidth: 576, size: 0.8, brightness: 0.55 }, // sm
+  { minWidth: 0, size: 0.7, brightness: 0.55 }, // xs
 ];
 
 const DEFAULT_ANIMATION_OPTIONS = {
@@ -91,7 +90,6 @@ class AnimationManager {
       ...DEFAULT_ANIMATION_OPTIONS,
       el: this.#animationContainer,
       size: animationBreakpoint.size,
-      yOffset: animationBreakpoint.yOffset,
     });
 
     this.#animationContainer.style.filter = `brightness(${animationBreakpoint.brightness})`;
