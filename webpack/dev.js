@@ -6,7 +6,7 @@ module.exports = merge(common, {
   mode: "development",
   devServer: {
     port: 9000,
-    watchFiles: ["./src/**/*.html"],
+    watchFiles: ["./src/**/*.html", "./src/**/*.css"],
   },
   devtool: "eval-source-map",
 });
