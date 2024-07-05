@@ -430,7 +430,7 @@ section .container {
 }
 
 .about-me .content ul li {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
 }
@@ -499,7 +499,7 @@ section .container {
   display: flex;
   align-items: center;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.09);
   transition: ease-in-out 0.3s;
 }
 
