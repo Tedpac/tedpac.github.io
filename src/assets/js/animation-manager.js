@@ -25,7 +25,7 @@ const ANIMATION_BREAKPOINTS = [
 ];
 
 const DEFAULT_ANIMATION_OPTIONS = {
-  mouseControls: true,
+  mouseControls: !window.matchMedia("(pointer: coarse)").matches,
   touchControls: false,
   gyroControls: false,
   minHeight: 200.0,
