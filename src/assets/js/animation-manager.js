@@ -16,12 +16,12 @@ const ANIMATION_RESIZE_DEBOUNCE_DELAY = 200;
  * - brightness: the brightness of the animation.
  */
 const ANIMATION_BREAKPOINTS = [
-  { minWidth: 1400, size: 1, brightness: 0.8 }, // xxl
-  { minWidth: 1200, size: 0.9, brightness: 0.75 }, // xl
-  { minWidth: 992, size: 0.9, brightness: 0.7 }, // lg
-  { minWidth: 768, size: 0.8, brightness: 0.6 }, // md
-  { minWidth: 576, size: 0.8, brightness: 0.55 }, // sm
-  { minWidth: 0, size: 0.7, brightness: 0.55 }, // xs
+  { minWidth: 1400, size: 1, brightness: 0.85 }, // xxl
+  { minWidth: 1200, size: 0.9, brightness: 0.85 }, // xl
+  { minWidth: 992, size: 0.9, brightness: 0.8 }, // lg
+  { minWidth: 768, size: 0.8, brightness: 0.75 }, // md
+  { minWidth: 576, size: 0.8, brightness: 0.75 }, // sm
+  { minWidth: 0, size: 0.7, brightness: 0.75 }, // xs
 ];
 
 const DEFAULT_ANIMATION_OPTIONS = {
