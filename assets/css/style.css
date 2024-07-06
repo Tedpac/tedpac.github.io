@@ -10,26 +10,7 @@ body {
   background-color: #000000;
   color: #fff;
   position: relative;
-  background: transparent;
   overflow-x: hidden;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  background: #000000 url("../img/bg.jpg") top right no-repeat;
-  background-size: cover;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 100vh;
-  z-index: -1;
-}
-
-@media (min-width: 1024px) {
-  body::before {
-    background-attachment: fixed;
-  }
 }
 
 #animation-container {
@@ -81,7 +62,7 @@ h6 {
   line-height: 1;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
-  text-shadow: 2px 2px 4px #181818;
+  text-shadow: 2px 2px 3px #000000;
 }
 
 #header h1 a,
@@ -95,7 +76,7 @@ h6 {
   font-size: 24px;
   margin-top: 20px;
   color: rgba(255, 255, 255, 0.8);
-  text-shadow: 2px 2px 4px #181818;
+  text-shadow: 2px 2px 3px #000000;
 }
 
 #header h2 span {
@@ -134,16 +115,26 @@ h6 {
 
 @media (max-width: 992px) {
   #header h1 {
-    font-size: 36px;
+    font-size: 40px;
+  }
+
+  #header h2:first-of-type {
+    margin-top: 5rem;
   }
 
   #header h2 {
-    font-size: 20px;
+    font-size: 21px;
     line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  #header h2:last-of-type {
+    margin-bottom: 5rem;
   }
 
   #header .social-links {
-    margin-top: 15px;
+    margin-top: 0;
   }
 
   #header .social-links a {
@@ -240,7 +231,7 @@ h6 {
   color: rgba(255, 255, 255, 0.7);
   white-space: nowrap;
   transition: 0.3s;
-  text-shadow: 2px 2px 4px #181818;
+  text-shadow: 2px 2px 3px #000000;
 }
 
 .navbar a i,
@@ -292,7 +283,11 @@ h6 {
   top: 15px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
+  .navbar {
+    margin-top: 0;
+  }
+
   .mobile-nav-toggle {
     display: block;
   }
@@ -427,6 +422,12 @@ section .container {
 .about-me .content ul {
   list-style: none;
   padding: 0;
+}
+
+@media (max-width: 992px) {
+  .about-me .content .row div:first-of-type ul {
+    margin-bottom: 0;
+  }
 }
 
 .about-me .content ul li {
