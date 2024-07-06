@@ -424,6 +424,12 @@ section .container {
   padding: 0;
 }
 
+@media (max-width: 992px) {
+  .about-me .content .row div:first-of-type ul {
+    margin-bottom: 0;
+  }
+}
+
 .about-me .content ul li {
   margin-bottom: 10px;
   display: flex;
