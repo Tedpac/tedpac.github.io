@@ -1,3 +1,5 @@
+import "../css/style.css";
+
 import { initializeTemplateCore } from "./template-core.js";
 import { AnimationManager } from "./animation-manager.js";
 import { initializeEmailAddressHandler } from "./email-address-handler.js";
