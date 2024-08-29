@@ -1,4 +1,4 @@
-# [My website!](https://tedpac.xyz) 👨🏻‍💻
+# [My Website!](https://tedpac.xyz) 👨🏻‍💻
 
 ## Getting started
 
@@ -28,7 +28,7 @@
    npm run start
    ```
 
-6. Navigate to http://localhost:9000 in a browser.
+6. Navigate to <http://localhost:9000> in a browser.
 
 ## Development
 
