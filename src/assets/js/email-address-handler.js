@@ -3,9 +3,9 @@
  * It removes the button and replaces it with a mailto link containing the decoded email address.
  */
 function showEmailAddress() {
-  const x = ["bmNh", "cGRl"];
-  const y = ["dG1A", "Z21h"];
-  const z = ["aWwu", "Y29t"];
+  const x = ["bmlj", "b2xh"];
+  const y = ["c0B0", "ZWRw"];
+  const z = ["YWMu", "eHl6"];
   const emailAddress = atob([...x, ...y, ...z].join(""));
 
   const emailAddressLink = document.createElement("a");
